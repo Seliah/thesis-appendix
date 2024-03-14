@@ -22,24 +22,24 @@ Spezifischer Hinweis: Die Framerate des Videos ist bewusst gering, weil die Anza
 
 ### Schlangenerkennung
 
-https://github.com/Seliah/thesis/assets/52240180/861faacd-564f-40b1-874b-f280b8000417
+https://github.com/Seliah/thesis-appendix/assets/52240180/7bd1a40e-6e47-4034-98ab-82e0ef781a63
 
 Alternativ siehe "schlangenerkennung.mp4" im lokalen Verzeichnis.
 
 ### Manipulationserkennung
 
-https://github.com/Seliah/thesis/assets/52240180/07f17a52-afbb-49c4-b6ef-1d3bbce83a9b
+https://github.com/Seliah/thesis-appendix/assets/52240180/8817eb31-a609-47d0-a7c3-0131c01d798f
 
 Alternativ siehe "tampering.mp4" im lokalen Verzeichnis.
 
 ### Linienüberwachung
 
-https://github.com/Seliah/thesis/assets/52240180/17520eae-02ff-46fe-9e6e-766f99564334
+https://github.com/Seliah/thesis-appendix/assets/52240180/b8bb1a39-040c-4c32-9d2c-53caf5ef5f48
 
 Alternativ siehe "linienüberwachung.mp4" im lokalen Verzeichnis.
 
 ### Regionsmonitoring
 
-https://github.com/Seliah/thesis/assets/52240180/16662526-085a-4af7-b1f4-d905d2be9729
+https://github.com/Seliah/thesis-appendix/assets/52240180/3930bb88-2561-4643-ad85-8b05e5466881
 
 Alternativ siehe "regionsmonitoring.mp4" im lokalen Verzeichnis.
