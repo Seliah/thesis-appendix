@@ -6,13 +6,13 @@ Die hier dargestellten Videos wurden komprimiert, um Speicherressourcen für die
 
 ## Bewegungssuche
 
-TODO
+https://github.com/Seliah/thesis-appendix/assets/52240180/98de66ae-1659-45d7-9327-7c5195587431
 
 Alternativ siehe "bewegungssuche.mp4" im lokalen Verzeichnis.
 
 ## Regalüberwachung
 
-TODO
+https://github.com/Seliah/thesis-appendix/assets/52240180/7b84cdc9-6597-4816-a404-8b0ff8e268f0
 
 Alternativ siehe "regalüberwachung.mp4" im lokalen Verzeichnis.
 
