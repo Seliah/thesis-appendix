@@ -49,7 +49,7 @@ https://github.com/Seliah/thesis-appendix/assets/52240180/b8bb1a39-040c-4c32-9d2
 
 Alternativ siehe "linienüberwachung.mp4" im lokalen Verzeichnis.
 
-Beschreibung: Im Videobild ist eine Linie mit einer gelben Strecke markiert. Der grüne Bereich beschreibt den Bereich, indem Erkennungen möglich sind (hier maximiert). Überschreitet der Autor die Linie von rechts nach links, wird eine Erkennung in der Konsole ausgegen. Überschreitet er sie von links nach rechts, geschieht dies nicht.
+Beschreibung: Im Videobild ist eine Linie mit einer gelben Strecke markiert. Der grüne Bereich beschreibt den Bereich, in dem Erkennungen möglich sind (hier maximiert). Überschreitet der Autor die Linie von rechts nach links, wird eine Erkennung in der Konsole ausgegen. Überschreitet er sie von links nach rechts, geschieht dies nicht.
 
 ### Regionsmonitoring
 
