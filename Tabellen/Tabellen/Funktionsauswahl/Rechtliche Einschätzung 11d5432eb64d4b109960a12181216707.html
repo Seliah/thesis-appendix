@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Rechtliche Einschätzung</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="11d5432e-b64d-4b10-9960-a12181216707" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">⚖️</span></div><h1 class="page-title">Rechtliche Einschätzung</h1><p class="page-description"></p></header><div class="page-body"><p id="3bf3d2c5-9484-494a-810e-aab6f1ff8118" class="">In der folgenden Tabelle werden die bereits gesammelten Funktionen anhand der gesammelten rechtlichen Grundsätze eingeschätzt. Hierbei wird für jede Funktion eine numerische Bewertung vergeben, die die rechtliche Umsetzbarkeit der Funktion schätzt.</p><div id="e73ade89-f758-463d-8b0b-684a97197962" class="collection-content"><h4 class="collection-title">Potenzielle Funktionen</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Beschreibung</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Rechtliche Umsetzbarkeit (0-10)</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesRelation"><path d="M13.1475 10.5869V3.72363C13.1475 3.25195 12.833 2.93066 12.3477 2.93066H5.48438C5.02637 2.93066 4.70508 3.27246 4.70508 3.67578C4.70508 4.07227 5.05371 4.40039 5.46387 4.40039H7.89746L10.8438 4.30469L9.59961 5.39844L3.08496 11.9199C2.92773 12.0771 2.8457 12.2686 2.8457 12.46C2.8457 12.8564 3.20801 13.2256 3.61816 13.2256C3.80957 13.2256 3.99414 13.1504 4.15137 12.9932L10.6729 6.47168L11.7803 5.22754L11.6641 8.05762V10.6074C11.6641 11.0176 11.9922 11.373 12.4023 11.373C12.8057 11.373 13.1475 11.0312 13.1475 10.5869Z"></path></svg></span>Relevante rechtliche Grundsätze</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Rechtliche Umsetzbarkeit Begründung</th></tr></thead><tbody><tr id="f9293d69-5e0c-4a3c-a2e4-f353c54d9f5a"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Schnittstelle%20f%C3%BCr%20externe%20Systeme%20f9293d695e0c4a3ca2e4f353c54d9f5a.html">Schnittstelle für externe Systeme</a></td><td class="cell-CmNY">Erweiterung des Alarmsystems für die Übertragbarkeit und Anzeige weiterer Metadaten und Unterscheidung von Alarmen und unkritischen Events oder Informationen.</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Hier liegt der rechtliche Wert bei den zugrundeliegenden Partnersystemen.</td></tr><tr id="4287d298-d374-4fe6-b7f9-a8b1af61275e"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Integration%20externer%20Events%204287d298d3744fe6b7f9a8b1af61275e.html">Integration externer Events</a></td><td class="cell-CmNY">Die Integrierung verschiedenster externer Computer Vision durch die Nutzung von Schnittstellen korrespondierender Produkte.</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Rechtlicher Wert beruht vollständig auf dem der genutzten Funktionen.</td></tr><tr id="e33dcd48-3fa2-4276-8d23-f8dec1290300"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Produkterkennung%20e33dcd483fa242768d23f8dec1290300.html">Produkterkennung</a></td><td class="cell-CmNY">Erkennung von Produkten in Regalen.</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Personen sind hier nicht involviert.</td></tr><tr id="93b51911-c5d9-478d-817b-73033591a09a"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20ge%C3%B6ffneter%20K%C3%BChlschr%C3%A4nke%2093b51911c5d9478d817b73033591a09a.html">Erkennung geöffneter Kühlschränke</a></td><td class="cell-CmNY">Siehe Name.</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Personen sind hier nicht involviert.</td></tr><tr id="91606106-578a-4873-bf81-d968848601f9"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20von%20leeren%20Regalen%2091606106578a4873bf81d968848601f9.html">Erkennung von leeren Regalen</a></td><td class="cell-CmNY">Erkennung von Lücken in Regalen.</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Personen sind hier nicht involviert.</td></tr><tr id="29a3b78b-5ed0-4b56-889c-1163172b9550"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20von%20Lecks%20und%20Pf%C3%BCtzen%2029a3b78b5ed04b56889c1163172b9550.html">Erkennung von Lecks und Pfützen</a></td><td class="cell-CmNY">Siehe Name.</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Personen sind hier nicht involviert.</td></tr><tr id="6b128090-dfcd-4eef-adc4-64d2c2c55ab5"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20von%20Deplatzierung%206b128090dfcd4eefadc464d2c2c55ab5.html">Erkennung von Deplatzierung</a></td><td class="cell-CmNY">Erkennung von deplatzierten Objekten (z. B. in einem Regal, auf dem Boden …).</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Personen sind hier nicht involviert.</td></tr><tr id="f62c0516-be53-47cb-a71a-f0e6bf2d2e90"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Feuererkennung%20f62c0516be5347cba71af0e6bf2d2e90.html">Feuererkennung</a></td><td class="cell-CmNY">Erkennung von Feuer und Rauch.</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Personen sind hier nicht involviert.</td></tr><tr id="60f23e08-132e-4af7-bab8-74875f9b773c"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Fehlererkennung%2060f23e08132e4af7bab874875f9b773c.html">Fehlererkennung</a></td><td class="cell-CmNY">Erkennung von fehlerhaftem  Videomaterial, welches z. B. durch Fehlfunktionen, Manipulation oder Vandalismus entsteht.</td><td class="cell-q?TJ">10</td><td class="cell-rl~n"></td><td class="cell-Nv^w">Personen sind hier nicht involviert.</td></tr><tr id="c0de7acd-9fb6-4041-8812-e2c87efc80e0"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Lokalisierung%20c0de7acd9fb640418812e2c87efc80e0.html">Lokalisierung</a></td><td class="cell-CmNY">Lokalisierung der Personen in einem Geschäft und Darstellung auf einer Live-Karte mit Aggregationen als Basis für Heatmaps und beliebten Routen.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Anonymisierung%20f9007a14a2304929ba4f9e374435effc.html">Anonymisierung</a></td><td class="cell-Nv^w">Aggregation der Daten kann anonym erfolgen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="c51a29d6-6e51-4b63-bf2e-045090e87e06"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20von%20Diebstahl%20durch%20Kassierer%20c51a29d66e514b63bf2e045090e87e06.html">Erkennung von Diebstahl durch Kassierer</a></td><td class="cell-CmNY">Erkennung des Verschwindens von Waren an der Kasse durch Personal.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personal müsste ggf. zustimmen, beispielsweise im Arbeitsvertrag.</td></tr><tr id="d187dcf2-4564-4f8d-be66-36dd4f4f4693"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Geldfach%C3%BCberwachung%20d187dcf245644f8dbe6636dd4f4f4693.html">Geldfachüberwachung</a></td><td class="cell-CmNY">Erkennung von unautorisierten Geldentnahmen durch Kassenpersonal.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personal müsste ggf. zustimmen, beispielsweise im Arbeitsvertrag.</td></tr><tr id="a3fc153b-4deb-4545-a8ff-13d25170e554"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Auspack-Monitoring%20f%C3%BCr%20Einkaufswagen%20a3fc153b4deb4545a8ff13d25170e554.html">Auspack-Monitoring für Einkaufswagen </a></td><td class="cell-CmNY">Überprüfung, ob eine Person alle Objekte aus ihrem Korb oder dem Wagen auf das Kassenband legt.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="85229f45-8c16-420c-81da-f5720a336190"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Bewegungserkennung%2085229f458c16420c81daf5720a336190.html">Bewegungserkennung</a></td><td class="cell-CmNY">Erkennung der Bewegung von Entitäten oder Teilen des Bildes.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="ab06c09c-91ac-4f1f-8e2c-1f9139898366"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Fokusgruppenanalyse%20ab06c09c91ac4f1f8e2c1f9139898366.html">Fokusgruppenanalyse</a></td><td class="cell-CmNY">Erkennung von Zugehörigkeitsmerkmalen bei Besuchern (z. B. Alter, Geschlecht …).</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Anonymisierung%20f9007a14a2304929ba4f9e374435effc.html">Anonymisierung</a></td><td class="cell-Nv^w">Speicherung kann anonym erfolgen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="a50c6f17-93b1-4455-8c52-c8318daef14b"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Wartezeitberechnung%20a50c6f1793b144558c52c8318daef14b.html">Wartezeitberechnung</a></td><td class="cell-CmNY">Erkennung von wartenden Personen und Aggregierung zu durchschnittlichen Wartezeiten in Schlangen oder an Ständen.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="8b7a90fb-3a3a-4e67-b097-77932e00e220"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/R%C3%BCcklasspr%C3%A4vention%208b7a90fb3a3a4e67b09777932e00e220.html">Rücklassprävention</a></td><td class="cell-CmNY">Erkennung von zurückgelassenen, unbeaufsichtigten Objekten.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="17fe76fb-d1f3-4113-8335-d81b859ab42f"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Bekleidungs%C3%BCberpr%C3%BCfung%2017fe76fbd1f341138335d81b859ab42f.html">Bekleidungsüberprüfung</a></td><td class="cell-CmNY">Überprüfung des Tragens eines bestimmten Kleidungsstücks (z. B. Helm, Warnweste …) in einem Gebiet.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personal müsste ggf. zustimmen, beispielsweise im Arbeitsvertrag.</td></tr><tr id="96a2daa7-1882-4860-b79d-6697d17f685f"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Waffenerkennung%2096a2daa718824860b79d6697d17f685f.html">Waffenerkennung</a></td><td class="cell-CmNY">Erkennung des Tragens einer Waffe durch eine Person (”Raised-Arms-Detection”).</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="5a64705e-9171-41fd-b544-8bafc2d17438"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Schlangenerkennung%205a64705e917141fdb5448bafc2d17438.html">Schlangenerkennung</a></td><td class="cell-CmNY">Erkennung von Warteschlangen und deren Dichte.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="cc4a45f6-a1c4-4e22-a976-b1b18e9cb7be"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Regionsmonitoring%20cc4a45f6a1c44e22a976b1b18e9cb7be.html">Regionsmonitoring</a></td><td class="cell-CmNY">Erkennung der Bewegung einer Entität in bestimmten Regions Of Interest. Diese Regions of Interest können mit Flächen oder begrenzenden Linien im Videobild markiert werden.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="6c9160bd-b9c6-4b5d-8a38-02b9f349c476"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Bewegungssuche%206c9160bdb9c64b5d8a3802b9f349c476.html">Bewegungssuche</a></td><td class="cell-CmNY">Erkennung von Bewegungen in bestimmten Bildbereichen.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="da71a098-cf71-4309-8de6-0495bc819e19"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Maskierung%20da71a098cf7143098de60495bc819e19.html">Maskierung</a></td><td class="cell-CmNY">Automatische Verpixelung von Personen.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="d9f9abb5-bd3c-473e-8df3-dc2ce2a5d822"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Personenz%C3%A4hlung%20d9f9abb5bd3c473e8df3dc2ce2a5d822.html">Personenzählung</a></td><td class="cell-CmNY">Erfassung der Summe von Menschen in einem Gebiet.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Anonymisierung%20f9007a14a2304929ba4f9e374435effc.html">Anonymisierung</a></td><td class="cell-Nv^w">Speicherung kann anonym erfolgen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="bf5cd43b-9b37-4234-8690-5690a25cfc31"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Visualisierung%20der%20Parkplatz-Belegung%20bf5cd43b9b37423486905690a25cfc31.html">Visualisierung der Parkplatz-Belegung</a></td><td class="cell-CmNY">Visualisierung von belegten und unbelegten Parkplätzen auf einer Karte.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Anonymisierung%20f9007a14a2304929ba4f9e374435effc.html">Anonymisierung</a></td><td class="cell-Nv^w">Speicherung kann anonym erfolgen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="516baf7c-bdaa-4e66-84f2-679fa2b6d891"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Parkplatz-Z%C3%A4hlung%20516baf7cbdaa4e6684f2679fa2b6d891.html">Parkplatz-Zählung</a></td><td class="cell-CmNY">Erfassung verfügbarer Parkplätze in Summe.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Anonymisierung%20f9007a14a2304929ba4f9e374435effc.html">Anonymisierung</a></td><td class="cell-Nv^w">Speicherung kann anonym erfolgen. Fahrer müssten hier ggf. zustimmen, beispielsweise durch die Befahrung eines Parkplatzes.</td></tr><tr id="8e98b94f-9b0c-4dc4-a3e0-fb9ed9deea7b"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/(Kamera-%C3%BCbergreifendes)%20Heatmapping%208e98b94f9b0c4dc4a3e0fb9ed9deea7b.html">(Kamera-übergreifendes) Heatmapping</a></td><td class="cell-CmNY">Visualisierung von Raumnutzung. Kann sich auf Heatmap im Bildbereich einer Kamera beschränken. Kann jedoch auch abstrakt mehrere Kameras zusammenfassen und Heatmap beispielsweise auf einer Flurkarte darstellen.</td><td class="cell-q?TJ">9</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Anonymisierung%20f9007a14a2304929ba4f9e374435effc.html">Anonymisierung</a></td><td class="cell-Nv^w">Speicherung kann anonym erfolgen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="07cd7d03-b931-4d34-93ff-0380ba8e0f83"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20verd%C3%A4chtiger%20%E2%80%9CSocial%20Signs%E2%80%9D%2007cd7d03b9314d3493ff0380ba8e0f83.html">Erkennung verdächtiger “Social Signs”</a></td><td class="cell-CmNY">Erkennung ausgewählter unbewusster Verhaltensmuster, die die Absicht für Diebstahl verraten.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Zu wissen, dass eine Videoüberwachungsanlage dies überprüft, könnte das kognitive Verhalten von Personen beeinflussen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="385cfd10-d2b0-46e1-b779-b38c627e1797"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20schneller%20Bewegungsmuster%20385cfd10d2b046e1b779b38c627e1797.html">Erkennung schneller Bewegungsmuster</a></td><td class="cell-CmNY">Erkennung von joggenden oder sprintenden Personen.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Zu wissen, dass eine Videoüberwachungsanlage dies überprüft, könnte das kognitive Verhalten von Personen beeinflussen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="3542288f-3a99-491e-9972-9cda74382791"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20der%20Erkundigung%20nach%20Kameras%203542288f3a99491e99729cda74382791.html">Erkennung der Erkundigung nach Kameras</a></td><td class="cell-CmNY">Erkennung von direktem Augenkontakt mit Kameras.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Zu wissen, dass eine Videoüberwachungsanlage dies überprüft, könnte das kognitive Verhalten von Personen beeinflussen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="a54f5267-c98c-4f78-aaba-c34e2cad59a5"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Scoring%20a54f5267c98c4f78aabac34e2cad59a5.html">Scoring</a></td><td class="cell-CmNY">Sicherheitsrelevante Bewertung von Personen in einem Markt durch Identifizierung und Wiedererkennung in unterschiedlichen Kameras auf Basis verdächtiger Aktionen (z. B. Einstecken, Rennen, Abräumen, Fokus für teure Gegenstände …).</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20von%20sozialem%20Scoring%20f51881a44a16481cb9f854419ce32797.html">Vermeidung von sozialem Scoring</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Es gibt eine rechtliche Grundlage, die soziales Scoring verbietet. Diese bezieht sich konkret auf das Scoring auf Basis von Stereotypen, was hier nicht geplant ist. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="da70b6c2-7df5-47ac-9dd4-bda4c0fa4bc1"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Verhaltenserkennung%20da70b6c27df547ac9dd4bda4c0fa4bc1.html">Verhaltenserkennung</a></td><td class="cell-CmNY">Erkennung von bestimmten Interaktionen von Menschen mit Waren (nehmen und untersuchen, kurz verweilen, ansehen …).</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Zu wissen, dass eine Videoüberwachungsanlage dies überprüft, könnte das kognitive Verhalten von Personen beeinflussen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="8324d61e-51fc-4a32-aba8-0c5ef8e7daf6"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Tiererkennung%208324d61e51fc4a32aba80c5ef8e7daf6.html">Tiererkennung</a></td><td class="cell-CmNY">Erkennung von Tieren (Hunden, Nutztier …).</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Personen sind hier nicht involviert. Besitzer müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Tiere gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="0a79f953-ec61-466f-8050-cd80d247532a"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Gewalterkennung%200a79f953ec61466f8050cd80d247532a.html">Gewalterkennung</a></td><td class="cell-CmNY">Erkennung von Gewaltanwendung (Schlagen, Schubsen …).</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="59867fd9-632b-4a83-90b0-ed80c068477d"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Geschwindigkeitserkennung%2059867fd9632b4a8390b0ed80c068477d.html">Geschwindigkeitserkennung</a></td><td class="cell-CmNY">Schätzung der Geschwindigkeit von fahrenden Vehikeln.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Fahrer müssten hier ggf. zustimmen, beispielsweise durch das Befahren eines Parkplatzes. Es muss darauf geachtet werden, dass alle Fahrzeugtypen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="00f06e79-0469-4da9-8fab-92b02abc3707"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Verweilerkennung%2000f06e7904694da98fab92b02abc3707.html">Verweilerkennung</a></td><td class="cell-CmNY">Erkennung von unerwünscht verweilenden Personen.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a></td><td class="cell-Nv^w">Zu wissen, dass eine Videoüberwachungsanlage dies überprüft, könnte das kognitive Verhalten von Personen beeinflussen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft.</td></tr><tr id="adcd7a03-8e98-4cb1-a2cf-5b0d6dd90b2a"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Abr%C3%A4umerkennung%20adcd7a038e984cb1a2cf5b0d6dd90b2a.html">Abräumerkennung</a></td><td class="cell-CmNY">Erkennung der Entfernung vieler Gegenstände von einem Regal innerhalb eines kurzen Zeitraumes.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Zu wissen, dass eine Videoüberwachungsanlage dies überprüft, könnte das kognitive Verhalten von Personen beeinflussen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="365b8352-06f5-4d04-9404-2d4e7640c05f"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Person-Down-Erkennung%20365b835206f54d0494042d4e7640c05f.html">Person-Down-Erkennung</a></td><td class="cell-CmNY">Erkennung des Fallens einer Person.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Fahrzeugtypen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="ee4ca906-20f5-4941-9211-773c346ad647"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Scan-Monitoring%20ee4ca90620f549419211773c346ad647.html">Scan-Monitoring</a></td><td class="cell-CmNY">Überprüfung, ob eine Person beim Einscannen alle Objekte einscannt.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="4932c0e3-c2a8-45f7-ad12-aff6dd7f6d1c"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Fiebermessung%204932c0e3c2a845f7ad12aff6dd7f6d1c.html">Fiebermessung</a></td><td class="cell-CmNY">Erkennung erhöhter Temperatur bei Personen.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="d3765435-5a7c-4d29-8f06-e86d9a8926db"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Einsteckerkennung%20d37654355a7c4d298f06e86d9a8926db.html">Einsteckerkennung</a></td><td class="cell-CmNY">Erkennung von Aktionen, bei denen Personen Objekte in eine Tasche (Rucksack, Tragetasche …) stecken.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="ae8ad409-f29e-4420-960d-b6951804f894"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Tracking%20ae8ad409f29e4420960db6951804f894.html">Tracking</a></td><td class="cell-CmNY">Nachverfolgung bestimmter Personen in einem bestimmten Gebiet.</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Hierfür muss die Personen nicht langfristig identifiziert werden, sie kann anhand ihrer Eigenschaften visuell getrackt werden. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="6ef33388-669c-4498-a18f-9372f81b6387"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Stellplatzsuche%20in%20Live-Videos%206ef33388669c4498a18f9372f81b6387.html">Stellplatzsuche in Live-Videos</a></td><td class="cell-CmNY">Suche nach einem parkenden Vehikel in Live-Bildern nach dessen Eigenschaften (z. B. Kennzeichen, Typ …).</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Personen müssten hier ggf. zustimmen, beispielsweise durch die Anfrage zur Suche. Es muss darauf geachtet werden, dass alle Fahrzeugtypen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="70fff395-7f10-4619-bb23-b3ce1f56168d"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Entit%C3%A4t-Suche%2070fff3957f104619bb23b3ce1f56168d.html">Entität-Suche</a></td><td class="cell-CmNY">Suche bestimmter Entitäten (z. B. Menschen, Vehikel, Tiere …) im Archiv-Material auf Basis ihrer Attribute (Farbe des Vehikels oder der Kleidung, Automarke, Alter, gelesenes Geschlecht der Person, Brille, Mütze, Maske, Rucksack …).</td><td class="cell-q?TJ">8</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Anonymisierung%20f9007a14a2304929ba4f9e374435effc.html">Anonymisierung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Speicherung kann anonym erfolgen. Die Eigenschaften einer Person könnten jedoch Rückschlüsse auf die Identität liefern. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="8eb6801f-c939-466d-b544-a88d727e67f9"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20des%20Mitnehmens%20von%20(teuren)%20Waren%208eb6801fc939466db544a88d727e67f9.html">Erkennung des Mitnehmens von (teuren) Waren</a></td><td class="cell-CmNY">Erkennung vom Aufnehmen und Mitnehmen einer Ware durch eine Person.</td><td class="cell-q?TJ">7</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Zu wissen, dass eine Videoüberwachungsanlage dies überprüft, könnte das kognitive Verhalten von Personen beeinflussen. Personen müssten hier ggf. zustimmen, beispielsweise durch den Eintritt in ein Geschäft. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="5f40e17c-fba4-4f74-9924-ca57d21e3792"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Falschparkerkennung%205f40e17cfba44f749924ca57d21e3792.html">Falschparkerkennung</a></td><td class="cell-CmNY">Erkennung nicht autorisierter Vehikel in einem bestimmten Gebiet.</td><td class="cell-q?TJ">7</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20der%20Beeinflussung%20des%20kognitiven%20Verhal%20924528fe87774569851f3142cfb60483.html">Vermeidung der Beeinflussung des kognitiven Verhaltens</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Zu wissen, dass eine Videoüberwachungsanlage dies überprüft, könnte das kognitive Verhalten von Personen beeinflussen. Fahrer müssten hier ggf. zustimmen, beispielsweise durch das Befahren eines Parkplatzes. Es muss darauf geachtet werden, dass alle Fahrzeugtypen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="fa54d8ec-4c53-4cff-a22d-d91d0b8be632"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Nummernschild-Suche%20fa54d8ec4c534cffa22dd91d0b8be632.html">Nummernschild-Suche</a></td><td class="cell-CmNY">Suche von Vehikeln mit bestimmten Nummernschildern im Archiv-Material.</td><td class="cell-q?TJ">5</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20von%20Identifizierung%2062d7149e8d0a40bc9ca1db167af5a687.html">Vermeidung von Identifizierung</a></td><td class="cell-Nv^w">Nummernschilder sind personenbezogen und diese Art der Erkennung könnte als Identifizierung interpretiert werden.</td></tr><tr id="8a988e82-424e-49b0-98e5-13936bd8bf84"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Personensuche%20in%20Live-Videos%208a988e82424e49b098e513936bd8bf84.html">Personensuche in Live-Videos</a></td><td class="cell-CmNY">Suche einer konkreten Person nach deren Eigenschaften (z. B. Gesicht, Kleidung, Alter, Größe …) in Live-Videos.</td><td class="cell-q?TJ">5</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Zustimmungsverpflichtung%20e86e5de0d3264c08833a980019d74f54.html">Zustimmungsverpflichtung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Anonymisierung%20f9007a14a2304929ba4f9e374435effc.html">Anonymisierung</a>, <a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20algorithmischer%20Diskriminierung%20283191db5d814923a70af7e5223cc33e.html">Vermeidung algorithmischer Diskriminierung</a></td><td class="cell-Nv^w">Speicherung kann anonym erfolgen. Die Eigenschaften einer Personen könnten jedoch Rückschlüsse auf die Identität liefern. Personen müssten hier ggf. zustimmen, beispielsweise die Anfrage zur Suche. Es muss darauf geachtet werden, dass alle Personengruppen gleich gut analysiert werden, um Diskriminierung zu vermeiden.</td></tr><tr id="2fd9d258-4717-47af-9bbb-a3cc1e30ac46"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Einfahrterkennung%202fd9d258471747af9bbba3cc1e30ac46.html">Einfahrterkennung</a></td><td class="cell-CmNY">Erfassung von Einfahrten und Ausfahrten mit Vehikel-Eigenschaften (z. B. Kennzeichen, Typ …) in einer Historie.</td><td class="cell-q?TJ">5</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20von%20Identifizierung%2062d7149e8d0a40bc9ca1db167af5a687.html">Vermeidung von Identifizierung</a></td><td class="cell-Nv^w">Nummernschilder sind personenbezogen und diese Art der Erkennung könnte als Identifizierung interpretiert werden.</td></tr><tr id="8bde9555-9830-436b-aeef-e20060382ee0"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Gesicht-Suche%208bde95559830436baeefe20060382ee0.html">Gesicht-Suche</a></td><td class="cell-CmNY">Suche von Gesichtern im Archiv-Material.</td><td class="cell-q?TJ">0</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20von%20Identifizierung%2062d7149e8d0a40bc9ca1db167af5a687.html">Vermeidung von Identifizierung</a></td><td class="cell-Nv^w">Gesichtserkennung zur Identifizierung von Personen könnte absehbar verboten sein.</td></tr><tr id="1ee069b0-2546-48d7-bd57-90650c5f6def"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Watchlists%201ee069b0254648d7bd5790650c5f6def.html">Watchlists</a></td><td class="cell-CmNY">Die Möglichkeit zur Pflege bestimmter Entitäten (z. B. People Of Interest, Vehikel …) zur Wiedererkennung.</td><td class="cell-q?TJ">0</td><td class="cell-rl~n"><a href="Rechtliche_Grundsaetze/Rechtliche_Grundsaetze/Vermeidung%20von%20Identifizierung%2062d7149e8d0a40bc9ca1db167af5a687.html">Vermeidung von Identifizierung</a></td><td class="cell-Nv^w">Gesichtserkennung zur Identifizierung von Personen könnte absehbar verboten sein.</td></tr><tr id="6e4637ce-7542-4fdd-85af-49101ab5acaa"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20des%20Zur%C3%BCcklegens%206e4637ce75424fdd85af49101ab5acaa.html">Erkennung des Zurücklegens</a></td><td class="cell-CmNY">Erkennung vom Aufnehmen und Zurücklegen einer Ware durch eine Person</td><td class="cell-q?TJ"></td><td class="cell-rl~n"></td><td class="cell-Nv^w"></td></tr><tr id="8aa13655-e173-43a1-8391-fb27c7fe7454"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Ber%C3%BChrungserkennung%208aa13655e17343a18391fb27c7fe7454.html">Berührungserkennung</a></td><td class="cell-CmNY">Erkennung des physischen Kontakts einer Person mit Objekten</td><td class="cell-q?TJ"></td><td class="cell-rl~n"></td><td class="cell-Nv^w"></td></tr><tr id="e18fda65-5025-4ad7-beec-81e4831472d1"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Ausrichtungserkennung%20e18fda6550254ad7beec81e4831472d1.html">Ausrichtungserkennung</a></td><td class="cell-CmNY">Erkennung der Ausrichtung einer Person</td><td class="cell-q?TJ"></td><td class="cell-rl~n"></td><td class="cell-Nv^w"></td></tr><tr id="6c523f6f-1cc3-4e64-a511-4ce43893b366"><td class="cell-title"><a href="Potenzielle_Funktionen/Potenzielle_Funktionen/Blickinterpretation%206c523f6f1cc34e64a5114ce43893b366.html">Blickinterpretation</a></td><td class="cell-CmNY">Erkennung des Blickwinkels einer Person</td><td class="cell-q?TJ"></td><td class="cell-rl~n"></td><td class="cell-Nv^w"></td></tr></tbody></table><br/><br/></div><div><h2 id="3eef62e8-4bc2-452b-81d5-e9ddf8f476e0" class="">Angaben</h2><p id="0c03bf22-80ba-41f1-9d01-ed28faa00b8d" class="">Die Inhalte dieser Website wurden im Rahmen der Masterarbeit von Elias Zielke erarbeitet. Diese Seite ist zusammen mit anderen Tabellen online einsehbar unter <a href="../../Tabellen.html">https://elias-zielke.notion.site/Tabellen-4acd9275fc91484db34d4a0b0b2b026a</a>.</p><p id="df272e3c-7f7d-40c6-92a4-aa0d07cf64ff" class="">Um Kontakt mit dem Autor aufzunehmen, kann folgende E-Mail-Adresse genutzt werden: <a href="mailto://elias.zielke@web.de">elias.zielke@web.de</a>. Mehr Informationen zum Autor gibt es auf der <a href="https://elias-zielke.net/">Website des Autors</a>. </p><p id="ed551f7d-2bca-4727-9834-a5ce97c048ea" class="">Das Impressum für diese Veröffentlichung ist hier einzusehen: <a href="../Impressum.html"><span class="icon">⚖️</span>Impressum</a>.</p><p id="ca62cc53-e6fa-40b4-b2bd-8648c85b2726" class="">Die Inhalte dieser Website wurden vom Autor mittels <a href="https://www.notion.so/">Notion</a> erstellt und werden von <a href="https://www.notion.so/">Notion</a> gehostet und bereitgestellt. Siehe <a href="https://www.notion.so/German-Impressum-d7aa5a52390d45d1ba0596bd271a1c87?pvs=21">Impressum von Notion</a>. Für Hinweise zum Datenschutz siehe die <a href="https://www.notion.so/Terms-and-Privacy-28ffdd083dc3473e9c2da6ec011b58ac?pvs=21">Nutzungsbestimmungen von Notion</a> unter “Privacy”.</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

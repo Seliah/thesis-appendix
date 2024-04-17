@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Test-Cases</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1c555b88-400b-4977-8783-fe4a3490a34b" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🧪</span></div><h1 class="page-title">Test-Cases</h1><p class="page-description"></p></header><div class="page-body"><p id="9bced562-7cc5-4334-9bf6-cc5f42ce0825" class="">In der folgenden Tabelle sind die Test-Cases definiert, die beschreiben, wie die jeweils korrespondierenden Anforderungen zu testen sind. Auch ist jeweils jene Funktion aus “potenzielle Funktionen” referenziert, die konkret zu testen ist.</p><div id="8620fd19-a5c9-460e-b46a-c802b1354e8e" class="collection-content"><h4 class="collection-title">Test-Cases</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesRelation"><path d="M13.1475 10.5869V3.72363C13.1475 3.25195 12.833 2.93066 12.3477 2.93066H5.48438C5.02637 2.93066 4.70508 3.27246 4.70508 3.67578C4.70508 4.07227 5.05371 4.40039 5.46387 4.40039H7.89746L10.8438 4.30469L9.59961 5.39844L3.08496 11.9199C2.92773 12.0771 2.8457 12.2686 2.8457 12.46C2.8457 12.8564 3.20801 13.2256 3.61816 13.2256C3.80957 13.2256 3.99414 13.1504 4.15137 12.9932L10.6729 6.47168L11.7803 5.22754L11.6641 8.05762V10.6074C11.6641 11.0176 11.9922 11.373 12.4023 11.373C12.8057 11.373 13.1475 11.0312 13.1475 10.5869Z"></path></svg></span>📝 Korrespondierende Anforderung</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesRelation"><path d="M13.1475 10.5869V3.72363C13.1475 3.25195 12.833 2.93066 12.3477 2.93066H5.48438C5.02637 2.93066 4.70508 3.27246 4.70508 3.67578C4.70508 4.07227 5.05371 4.40039 5.46387 4.40039H7.89746L10.8438 4.30469L9.59961 5.39844L3.08496 11.9199C2.92773 12.0771 2.8457 12.2686 2.8457 12.46C2.8457 12.8564 3.20801 13.2256 3.61816 13.2256C3.80957 13.2256 3.99414 13.1504 4.15137 12.9932L10.6729 6.47168L11.7803 5.22754L11.6641 8.05762V10.6074C11.6641 11.0176 11.9922 11.373 12.4023 11.373C12.8057 11.373 13.1475 11.0312 13.1475 10.5869Z"></path></svg></span>Zu testende Funktion</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Handlungsbeschreibung</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Erwartetes Ergebnis</th></tr></thead><tbody><tr id="ac788986-d7ed-4a63-9e57-3ec0a3b2317f"><td class="cell-title"><a href="Test-Cases/Test-Cases/Performance-Metriken%20ac788986d7ed4a639e573ec0a3b2317f.html">Performance-Metriken</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Unabh%C3%A4ngigkeit%20356081e3914143d7922bbe82c5a11085.html">Unabhängigkeit</a></td><td class="cell-K{f="></td><td class="cell-[VWN">Mit “htop” wird überprüft, wie CPU und Arbeitsspeicher während der Ausführungszeit des Prototyps ausgelastet sind. Dies wird mit der Auslastung der Ressourcen ohne Prototyp verglichen.</td><td class="cell-If[m">Die Ressourcenauslastung ist hoch, stößt jedoch nicht absehbar an Kapazitäten.</td></tr><tr id="7f89640e-c86a-469e-9008-012925286aeb"><td class="cell-title"><a href="Test-Cases/Test-Cases/False%20Positives%207f89640ec86a469e9008012925286aeb.html">False Positives</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Minimierung%20der%20False%20Positives%20691f831c44b343799e70c38a77f09e10.html">Minimierung der False Positives</a></td><td class="cell-K{f="></td><td class="cell-[VWN">Das System wird über einen bestimmten Zeitraum ausgeführt und auf Erkennungen hin überwacht.</td><td class="cell-If[m">Es treten weniger als 20% false Positives auf.</td></tr><tr id="8daf711c-93ca-4922-b737-3abad342dd35"><td class="cell-title"><a href="Test-Cases/Test-Cases/Offline%208daf711c93ca4922b7373abad342dd35.html">Offline</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Offline%20a50d4cf7f224454fae8feefd20d220d4.html">Offline</a></td><td class="cell-K{f="></td><td class="cell-[VWN">Ausführung der Software ohne Internetanbindung.</td><td class="cell-If[m">Der Prototype funktioniert uneingeschränkt.</td></tr><tr id="48f1b16d-2156-4683-9ba5-2ac970abda75"><td class="cell-title"><a href="Test-Cases/Test-Cases/Langfristige%20Ausf%C3%BChrung%2048f1b16d215646839ba52ac970abda75.html">Langfristige Ausführung</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Stabilit%C3%A4t%204516043dc9064c769da25f357644d232.html">Stabilität</a></td><td class="cell-K{f="></td><td class="cell-[VWN">Der Prototyp wird über drei Tage lang mittels tmux laufen gelassen. Nach drei Tagen wird der Prozess mittels tmux nach Status und Abstürzen überprüft.</td><td class="cell-If[m">Es gibt kein Absturz und keinen Zeitraum der Inaktivität.</td></tr><tr id="4e6355f3-88ad-45b0-aa36-61cddfbf963e"><td class="cell-title"><a href="Test-Cases/Test-Cases/Erkennung%20des%20Eintritts%20in%20eine%20Region%204e6355f388ad45b0aa3661cddfbf963e.html">Erkennung des Eintritts in eine Region</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Beliebige%20Integration%205179d9bbf0b9460a9d2e14e221c2d550.html">Beliebige Integration</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Regionsmonitoring%20cc4a45f6a1c44e22a976b1b18e9cb7be.html">Regionsmonitoring</a></td><td class="cell-[VWN">Auf der Kamera wird die Bereichsüberwachung eingerichtet. Der konfigurierte Bereich wird betreten.</td><td class="cell-If[m">Es wird ein Ereignis erkannt. Das Event wird über die Konsole kommuniziert.</td></tr><tr id="30270d11-c0a5-4a13-852b-ba5be4cf2ba0"><td class="cell-title"><a href="Test-Cases/Test-Cases/Erkennung%20einer%20Linien%C3%BCberschreitung%2030270d11c0a54a13852bba5be4cf2ba0.html">Erkennung einer Linienüberschreitung</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Beliebige%20Integration%205179d9bbf0b9460a9d2e14e221c2d550.html">Beliebige Integration</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Regionsmonitoring%20cc4a45f6a1c44e22a976b1b18e9cb7be.html">Regionsmonitoring</a></td><td class="cell-[VWN">Auf der Kamera wird eine einseitige Linienüberwachung eingerichtet. Die konfigurierte Linie wird von einer Seite überschritten. Anschließend wird sie von der anderen Seite überschritten.</td><td class="cell-If[m">Beim zweiten Überschreiten wird kein Ereignis erkannt. Bei dem Ersten jedoch schon. Das Event wird über die Konsole kommuniziert.</td></tr><tr id="770d6b7f-07f1-4fa9-8796-403a6cf2e8ea"><td class="cell-title"><a href="Test-Cases/Test-Cases/Erkennung%20von%20Fehlern%20im%20Bild%20770d6b7f07f14fa98796403a6cf2e8ea.html">Erkennung von Fehlern im Bild</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Beliebige%20Integration%205179d9bbf0b9460a9d2e14e221c2d550.html">Beliebige Integration</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Fehlererkennung%2060f23e08132e4af7bab874875f9b773c.html">Fehlererkennung</a></td><td class="cell-[VWN">Die Kamera wird mit der Hand abgedunkelt.</td><td class="cell-If[m">Es wird ein Fehler erkannt. Das Event wird über die Konsole kommuniziert.</td></tr><tr id="bd34f2f3-4ea9-464f-8287-1ac1469ad2db"><td class="cell-title"><a href="Test-Cases/Test-Cases/Erkennung%20bei%20mehreren%20Personen%20bd34f2f34ea9464f82871ac1469ad2db.html">Erkennung bei mehreren Personen</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Erkennung%20von%20Schlangen%20623767e3337748b7a140cba33f98e8c5.html">Erkennung von Schlangen</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Schlangenerkennung%205a64705e917141fdb5448bafc2d17438.html">Schlangenerkennung</a></td><td class="cell-[VWN">Die Kamera wird so konfiguriert, dass sie bei zwei Personen eine Schlange meldet. Anschließend stellen sich zwei Personen in den zu analysierenden Bildbereich.</td><td class="cell-If[m">Eine Warteschlange wird erkannt. Das Event wird über die Konsole kommuniziert.</td></tr><tr id="60bcbb28-0a46-4329-b4b7-87534e228764"><td class="cell-title"><a href="Test-Cases/Test-Cases/Erkennung%20bei%20einer%20Person%2060bcbb280a464329b4b787534e228764.html">Erkennung bei einer Person</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Erkennung%20von%20Schlangen%20623767e3337748b7a140cba33f98e8c5.html">Erkennung von Schlangen</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Schlangenerkennung%205a64705e917141fdb5448bafc2d17438.html">Schlangenerkennung</a></td><td class="cell-[VWN">Die Kamera wird so konfiguriert, dass sie bereits bei einer Person eine Schlange meldet. Anschließend stellt sich eine Person in den zu analysierenden Bildbereich.</td><td class="cell-If[m">Eine Warteschlange wird erkannt. Das Event wird über die Konsole kommuniziert.</td></tr><tr id="b296115b-41b7-491c-aa62-01a210768de9"><td class="cell-title"><a href="Test-Cases/Test-Cases/Neustart%20b296115b41b7491caa6201a210768de9.html">Neustart</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Persistenz%204b96867cceb840e68bf26217cc245e25.html">Persistenz</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Bewegungssuche%206c9160bdb9c64b5d8a3802b9f349c476.html">Bewegungssuche</a></td><td class="cell-[VWN">Der Prototyp wird neu gestartet.</td><td class="cell-If[m">Die bisher gesammelten Analyseergebnisse sollten gespeichert und nach dem Start wieder eingelesen worden sein.</td></tr><tr id="31e99755-f1be-4c4b-823f-14165f8356ed"><td class="cell-title"><a href="Test-Cases/Test-Cases/Darstellung%2031e99755f1be4c4b823f14165f8356ed.html">Darstellung</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Darstellung%20779c1a732e72429eabd072f648ee900d.html">Darstellung</a>, <a href="Anforderungen/Anforderungen/Bildauswahl%2082ffc0005d06430da4bf31e24fb367d1.html">Bildauswahl</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Bewegungssuche%206c9160bdb9c64b5d8a3802b9f349c476.html">Bewegungssuche</a></td><td class="cell-[VWN">Im Archiv wird ein Bereich markiert, indem Bewegungen definitiv passiert sind.</td><td class="cell-If[m">Der Prototyp markiert in der Zeitleiste die Bewegungen im markierten Bereich.</td></tr><tr id="9bd94fb0-c5bb-46f0-a53f-f06198afd893"><td class="cell-title"><a href="Test-Cases/Test-Cases/Heatmap%209bd94fb0c5bb46f0a53ff06198afd893.html">Heatmap</a></td><td class="cell-Voip"></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/(Kamera-%C3%BCbergreifendes)%20Heatmapping%208e98b94f9b0c4dc4a3e0fb9ed9deea7b.html">(Kamera-übergreifendes) Heatmapping</a></td><td class="cell-[VWN">Die Bewegungserkennung wird über einen Tag hinweg laufen gelassen.</td><td class="cell-If[m">Im Archiv wird eine Heatmap angezeigt, die Segmente mit vielen Bewegungen korrekt hervorhebt.</td></tr><tr id="3fb31175-d0ac-446a-a46f-743ca12292d3"><td class="cell-title"><a href="Test-Cases/Test-Cases/Winken%203fb31175d0ac446aa46f743ca12292d3.html">Winken</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Lokalisierung%20von%20Bewegungen%203519d9b8aa7b43ca9b96a3d434e53e7a.html">Lokalisierung von Bewegungen</a>, <a href="Anforderungen/Anforderungen/Erkennung%20von%20Bewegungen%20fbd36a0379994f2aa1d4a3390fad1e3c.html">Erkennung von Bewegungen</a>, <a href="Anforderungen/Anforderungen/Zeitliche%20Einordnung%20von%20Bewegungen%20644bc5c765e94d77aea8035164048020.html">Zeitliche Einordnung von Bewegungen</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Bewegungssuche%206c9160bdb9c64b5d8a3802b9f349c476.html">Bewegungssuche</a></td><td class="cell-[VWN">Im analysierten Video wird gewinkt.</td><td class="cell-If[m">Der Prototyp erkennt die Bewegung beim Winken und ordnet sie örtlich und zeitlich korrekt ein.</td></tr><tr id="1d0638f9-3296-48a0-a191-999778d4f393"><td class="cell-title"><a href="Test-Cases/Test-Cases/Erkennung%20von%20L%C3%BCcken%20in%20einem%20Video%201d0638f9329648a0a191999778d4f393.html">Erkennung von Lücken in einem Video</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Erkennung%20von%20L%C3%BCcken%2085d68721c2394717ab322118cbe86c79.html">Erkennung von Lücken</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20von%20leeren%20Regalen%2091606106578a4873bf81d968848601f9.html">Erkennung von leeren Regalen</a></td><td class="cell-[VWN">Dem Prototyp wird ein Video von einem Regal gegeben, bei dem sich Lücken auftun.</td><td class="cell-If[m">Die neu aufgehenden Lücken werden als solche erkannt.</td></tr><tr id="40cda1f2-2a0c-43b4-9300-f90050f0dfa4"><td class="cell-title"><a href="Test-Cases/Test-Cases/Erkennung%20von%20L%C3%BCcken%20in%20einem%20Standbild%2040cda1f22a0c43b49300f90050f0dfa4.html">Erkennung von Lücken in einem Standbild</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Erkennung%20von%20L%C3%BCcken%2085d68721c2394717ab322118cbe86c79.html">Erkennung von Lücken</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Erkennung%20von%20leeren%20Regalen%2091606106578a4873bf81d968848601f9.html">Erkennung von leeren Regalen</a></td><td class="cell-[VWN">Dem Prototyp wird ein Bild von einem Regal mit n Lücken gegeben.</td><td class="cell-If[m">Es werden mindestens eine und maximal n Lücken erkannt.</td></tr><tr id="38bc133f-93de-4a77-851f-1d70ac0b4f65"><td class="cell-title"><a href="Test-Cases/Test-Cases/Verdeckung%2038bc133f93de4a77851f1d70ac0b4f65.html">Verdeckung</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Erkennung%20von%20Entnahmen%207cf692169a8c4a95a6a556b461d4988c.html">Erkennung von Entnahmen</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Abr%C3%A4umerkennung%20adcd7a038e984cb1a2cf5b0d6dd90b2a.html">Abräumerkennung</a></td><td class="cell-[VWN">Eine Lücke wird mit dem Körper für 5 Sekunden verdeckt.</td><td class="cell-If[m">Die temporär verdeckte Lücke wird nach Auftauchen nicht erneut als neue Entnahme interpretiert.</td></tr><tr id="ee459ea7-bc31-4710-a94a-532ee2bf073e"><td class="cell-title"><a href="Test-Cases/Test-Cases/Entnahme%20ohne%20neue%20L%C3%BCcke%20ee459ea7bc314710a94a532ee2bf073e.html">Entnahme ohne neue Lücke</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Erkennung%20von%20Entnahmen%207cf692169a8c4a95a6a556b461d4988c.html">Erkennung von Entnahmen</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Abr%C3%A4umerkennung%20adcd7a038e984cb1a2cf5b0d6dd90b2a.html">Abräumerkennung</a></td><td class="cell-[VWN">Es wird ein Produkt aus dem Regal entfernt, ohne dass hierbei eine neue Lücke entsteht.</td><td class="cell-If[m">Es wird keine neue Entnahme erkannt.</td></tr><tr id="84dfce51-390f-49f3-b08c-5a430c0a1408"><td class="cell-title"><a href="Test-Cases/Test-Cases/Vergr%C3%B6%C3%9Ferung%20einer%20L%C3%BCcke%2084dfce51390f49f3b08c5a430c0a1408.html">Vergrößerung einer Lücke</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Erkennung%20von%20Entnahmen%207cf692169a8c4a95a6a556b461d4988c.html">Erkennung von Entnahmen</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Abr%C3%A4umerkennung%20adcd7a038e984cb1a2cf5b0d6dd90b2a.html">Abräumerkennung</a></td><td class="cell-[VWN">Eine Lücke wird vergrößert, indem erweiternde Entnahmen gemacht werden.</td><td class="cell-If[m">Eine Entnahme wird erkannt. Das Event wird die Konsole kommuniziert.</td></tr><tr id="b6aa4a87-3439-482e-9e1c-20c3e2b84e2f"><td class="cell-title"><a href="Test-Cases/Test-Cases/Entnahme%20mit%20neuer%20L%C3%BCcke%20b6aa4a873439482e9e1c20c3e2b84e2f.html">Entnahme mit neuer Lücke</a></td><td class="cell-Voip"><a href="Anforderungen/Anforderungen/Erkennung%20von%20Entnahmen%207cf692169a8c4a95a6a556b461d4988c.html">Erkennung von Entnahmen</a></td><td class="cell-K{f="><a href="../Funktionsauswahl/Potenzielle_Funktionen/Potenzielle_Funktionen/Abr%C3%A4umerkennung%20adcd7a038e984cb1a2cf5b0d6dd90b2a.html">Abräumerkennung</a></td><td class="cell-[VWN">Es wird ein Produkt aus dem Regal entfernt, sodass eine neue Lücke entsteht.</td><td class="cell-If[m">Eine Entnahme wird erkannt. Das Event wird die Konsole kommuniziert.</td></tr></tbody></table><br/><br/></div><div><h2 id="3eef62e8-4bc2-452b-81d5-e9ddf8f476e0" class="">Angaben</h2><p id="0c03bf22-80ba-41f1-9d01-ed28faa00b8d" class="">Die Inhalte dieser Website wurden im Rahmen der Masterarbeit von Elias Zielke erarbeitet. Diese Seite ist zusammen mit anderen Tabellen online einsehbar unter <a href="../../Tabellen.html">https://elias-zielke.notion.site/Tabellen-4acd9275fc91484db34d4a0b0b2b026a</a>.</p><p id="df272e3c-7f7d-40c6-92a4-aa0d07cf64ff" class="">Um Kontakt mit dem Autor aufzunehmen, kann folgende E-Mail-Adresse genutzt werden: <a href="mailto://elias.zielke@web.de">elias.zielke@web.de</a>. Mehr Informationen zum Autor gibt es auf der <a href="https://elias-zielke.net/">Website des Autors</a>. </p><p id="ed551f7d-2bca-4727-9834-a5ce97c048ea" class="">Das Impressum für diese Veröffentlichung ist hier einzusehen: <a href="../Impressum.html"><span class="icon">⚖️</span>Impressum</a>.</p><p id="ca62cc53-e6fa-40b4-b2bd-8648c85b2726" class="">Die Inhalte dieser Website wurden vom Autor mittels <a href="https://www.notion.so/">Notion</a> erstellt und werden von <a href="https://www.notion.so/">Notion</a> gehostet und bereitgestellt. Siehe <a href="https://www.notion.so/German-Impressum-d7aa5a52390d45d1ba0596bd271a1c87?pvs=21">Impressum von Notion</a>. Für Hinweise zum Datenschutz siehe die <a href="https://www.notion.so/Terms-and-Privacy-28ffdd083dc3473e9c2da6ec011b58ac?pvs=21">Nutzungsbestimmungen von Notion</a> unter “Privacy”.</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
